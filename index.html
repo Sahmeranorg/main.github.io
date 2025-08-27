@@ -1,0 +1,201 @@
+<script>
+    // Sağ tıklama olayını yakalama
+    window.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        alert("Köyüne Amına Kodum.");
+    });
+	
+</script>
+<script>
+    // Klavyeden kısayol tuşlarını yakalama
+    window.addEventListener('keydown', function(e) {
+        // Klavyeden F12 tuşuna basılırsa
+        if (e.keyCode == 123) {
+            e.preventDefault(); // Tuşun varsayılan işlevini engelle
+        }
+    });
+</script>
+<script type="text/javascript">
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.onkeydown = function(e) {
+    if (e.keyCode == 123) {
+        alert("Yasak Knks :D");
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        alert("Yasak Knks :D");
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        alert("Yasak Knks :D");
+        return false;
+    }
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        alert("Yasak Knks :D");
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+        alert("Yasak Knks :D");
+        return false;
+    }if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
+        alert("Yasak Knks :D");
+        return false;
+    }
+}
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="npm/bootstrap%405.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
+    <link rel="stylesheet" href="ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="icon" href="https://.discordapp.com/attachments/1109538011483471883/1157397918601445416/yuvarlak-ahsap-magnet-58mm-renkli-atatuerk-baskili-model-1.jpg?ex=6518764f&is=651724cf&hm=440ab2538d96fbd0d36a2d131330fff582b8d060156a106085a6c3fb993101db&">
+    <style>
+        @import url('css2');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: rgb(63, 48, 48);
+        }
+
+        .container-fluid {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .text {
+            margin: 20px;
+            text-align: center;
+            font-size: x-large;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            border-radius: 50%;
+            max-width: 150px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .start-stop {
+            cursor: pointer;
+        }
+
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #333;
+            z-index: -1;
+
+        }
+
+        .video-container video {
+            min-width: 100%;
+            min-height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        /* Video Konumlandırma Bitiş */
+
+        /* Karartma Efekti */
+        .video-container:after {
+            content: '';
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="image-container">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <h4 class="text-center text"><a href="https://www.instagram.com/sahmeranjpg/" target="_blank"><font color="#7289da">Satış / Yardım Destek İçin Tıkla</font></a></h4>
+                <h4 class="text-center text"><a href="#ogin.html">GİRİŞ'mi Yapmak İstiyorsun TIKLA</a></h4>
+            </div>
+            <div class="text-center">
+                <h2>Ne mutlu <span style="color: red;">"Türküm"</span> diyene.</h2>
+            </div>
+            <br></br>
+            <div class="col-lg-12">
+                <h4 class="text-center text"><p id="start-stop" class="text-center start-stop"><font color="RED">SES AÇ ACİL!</font></p></h4>
+            </div>
+        </div>
+        <div class="video-container">
+            <video src="turk/ataturk.mp4" autoplay="" loop="" playsinline="" muted=""></video>
+        </div>
+    </div>
+
+    <script>
+        
+        const button = document.getElementById('start-stop');
+        //
+        const audio = new Audio('turk/ataturk.mp3');
+        audio.loop = true;
+        button.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                button.innerHTML = 'Şarkıyı Durdur';
+            } else {
+                audio.pause();
+                button.innerHTML = 'Şarkıyı Oynat';
+            }
+        });
+
+        var msg = "YUNUS BALIĞI                         ";
+
+
+        function scroll_title() {
+            document.title = msg;
+            msg = msg.substring(1, msg.length) + msg.charAt(0);
+            setTimeout("scroll_title()", speed);
+        }
+
+        scroll_title();
+
+    </script>
+</body>
+
+</html>
